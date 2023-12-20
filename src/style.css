@@ -1,0 +1,25 @@
+.todoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    margin: auto;
+    margin-top: 10rem;
+    
+}
+
+
+.todoInput{
+    height: 2rem;
+    width: 30rem;
+  text-align: center;
+    
+
+}
+
+.todo-Btn{
+   
+    margin-left: 1vh;
+   
+   
+}
