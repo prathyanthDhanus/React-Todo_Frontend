@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from '../Api/AxiosApi';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "../style.css";
@@ -7,6 +7,7 @@ import "../style.css";
 const Home = () => {
 
  
+//---------------------submit function-------------------------
 
 const handleSubmit = async(e)=>{
 
@@ -21,7 +22,7 @@ const data = {
 // console.log(data);
 try {
   // Send data to the backend
-  const response = await axios.post("http://localhost:3000/add/todo/tasks",data)
+  const response = await axios.post("/add/todo/tasks",data)
 
   console.log("Task added successfully:", response.data);
   e.target.reset();
@@ -29,13 +30,13 @@ try {
   console.error("Error adding task:", error);
 }
 }
-
+//--------------------------------------------------------------
   return (
-<div className='todoDiv' >
-    <div >
+
+    <div  className='todoDiv' >
       <h1 >Todo List</h1>
-     
-        <Form onSubmit={handleSubmit}  >
+     <div>
+     <Form onSubmit={handleSubmit} >
 
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Control type="text" placeholder="Title" name='title' />
@@ -47,14 +48,16 @@ try {
            placeholder='What is your task today?' name='task'/>
         </Form.Group>
         <Button variant="success" type='submit' className='todo-Btn'>Add task</Button>
-      </Form>
+      </Form> 
+     </div>
+        
        
       
     </div>
 
   
 
-    </div>
+    
   )
 }
 

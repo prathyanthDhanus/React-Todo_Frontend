@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import axios from '../Api/AxiosApi'
 import { useNavigate } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 
@@ -11,7 +11,7 @@ const Viewtasks = () => {
         const fetchData = async () => {
 
             try {
-              const response = await axios.get('http://localhost:3000/get/todo/tasks')
+              const response = await axios.get('/get/todo/tasks')
               const data = response.data.data;
               console.log(data);
               setTasks(data)

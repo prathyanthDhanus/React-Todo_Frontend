@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react';
-import axios from 'axios';
+import axios from '../Api/AxiosApi';
 
 const Viewfulltasks = () => {
 
@@ -13,7 +13,7 @@ const Viewfulltasks = () => {
         const fetchData = async () => {
 
             try {
-              const response = await axios.get(`http://localhost:3000/get/todo/tasks/${id}`)
+              const response = await axios.get(`/get/todo/tasks/${id}`)
               const data = response.data.data;
               console.log(data);
               setTasks([data])
