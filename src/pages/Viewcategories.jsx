@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect } from 'react';
 import axios from '../Api/AxiosApi';
 
-const Viewfulltasks = () => {
+const Viewcategories = () => {
 
     const {id} = useParams();
     const[tasks,setTasks] = useState([])
@@ -11,7 +11,6 @@ const Viewfulltasks = () => {
 
     useEffect(()=>{
         const fetchData = async () => {
-
             try {
               const response = await axios.get(`/get/todo/tasks/${id}`)
               const data = response.data.data;
@@ -54,4 +53,4 @@ const Viewfulltasks = () => {
   )
 }
 
-export default Viewfulltasks
+export default Viewcategories

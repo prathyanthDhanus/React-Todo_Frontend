@@ -1,9 +1,12 @@
 /* POPPINS FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
 
-*{
+/* *{
     font-family: 'Poppins', sans-serif;
-}
+} */
+
+
+
 .wrapper{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
     padding: 0 20px 0 20px;
@@ -37,7 +40,8 @@
   height:550px;
   border-radius: 10px;
   background: #fff;
-  padding: 5px;
+  padding-left: 25px;
+  /* padding: 10px; */
   box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
 }
 .text{

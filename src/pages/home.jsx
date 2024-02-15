@@ -1,64 +1,50 @@
-import React, { useState } from 'react';
-import axios from '../Api/AxiosApi';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import "../style.css";
+import React, { useEffect, useState } from "react";
+import CustomCard from "../component/Card";
+import axios from "../Api/AxiosApi";
+import { useContext } from "react";
+import { myContext } from "../context/contextAPI";
+import { FaFolderOpen } from "react-icons/fa";
+import "../Styles/home.css"
+
 
 const Home = () => {
+  // const { userId } = useContext(myContext);
+  // console.log("user", userId);
+  const { category, setCategory } = useContext(myContext);
 
  
-//---------------------submit function-------------------------
+ 
+  // const [category, setCategory] = useState([]);
 
-const handleSubmit = async(e)=>{
+  // useEffect(() => {
+  //   const fetchCategory = async () => {
+  //     try {
+  //       const response = await axios.get(`/get/todo/category/${userId}`);
+  //       setCategory(response.data.data);
+  //     } catch (error) {
+  //       console.log("Error:", error);
+  //     }
+  //   };
 
-e.preventDefault();
-const title = e.target.elements.title.value;
-const description = e.target.elements.task.value;
-
-const data = {
-  title,
-  description
-}
-// console.log(data);
-try {
-  // Send data to the backend
-  const response = await axios.post("/add/todo/tasks",data)
-
-  console.log("Task added successfully:", response.data);
-  e.target.reset();
-} catch (error) {
-  console.error("Error adding task:", error);
-}
-}
-//--------------------------------------------------------------
-  return (
-
-    <div  className='todoDiv' >
-      <h1 >Todo List</h1>
-     <div>
-     <Form onSubmit={handleSubmit} >
-
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Control type="text" placeholder="Title" name='title' />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          
-          <Form.Control as="textarea" rows={3}  type='text'
-           placeholder='What is your task today?' name='task'/>
-        </Form.Group>
-        <Button variant="success" type='submit' className='todo-Btn'>Add task</Button>
-      </Form> 
-     </div>
-        
-       
-      
-    </div>
-
+  //   fetchCategory();
+  // }, [userId, setCategory]);
   
 
-    
-  )
-}
+  return (
+    <div className="maindiv-home">
+    <div className="home-container">
+    <h1 className="home-title">My Categories</h1>
+    <ul className="task-list">
+    {category.map((task) => (
+      <li key={task.id} className="task-item">
+      <h2 className="task-title">{task.categories}</h2>
+      <FaFolderOpen className="folder-icon" />  
+      </li>
+      ))}
+      </ul>
+      </div>
+      </div>
+  );
+};
 
-export default Home
+export default Home;
