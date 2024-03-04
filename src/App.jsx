@@ -14,7 +14,10 @@ import { fetchCategoryData } from './Functions/GetCategory';
 function App() {
  
   const [userId, setUserId] = useState(localStorage.getItem('userId'));
-  const [category,setCategory] = useState([])
+  const [category,setCategory] = useState([]);
+
+
+  
  const contextValue = {
   userId,
   category,setCategory

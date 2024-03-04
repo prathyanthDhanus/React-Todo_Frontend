@@ -25,7 +25,7 @@ const LoginComponent = () => {
         try {
           // Send data to the backend
           const response = await axios.post("/user/login",userData)
-          // console.log(response.data.data);
+         
           if(response.status===200){
             
             // Cookies.set('userId', response.data.data, { expires: 7, path: '/', secure: true })
