@@ -4,8 +4,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 import { myContext } from "../context/contextAPI";
 import Notfound from "../component/Notfound";
-
-
+import "../Styles/viewTasks.css"
+import CustomCard from "../component/Card";
+import { Button } from "react-bootstrap";
 
 const Viewtasks = () => {
 
@@ -30,9 +31,15 @@ const Viewtasks = () => {
           params,
         });
         const data = response.data.data;
-        console.log(response)
+        const sortedTasks = data.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        
         if(response.status===200){
-          setTasks(data);
+          setTasks(sortedTasks)
         }
       } catch (error) {
         setError(true);
@@ -42,19 +49,26 @@ const Viewtasks = () => {
   }, [id]);
 
   return (
-    <>
-    {error?(
+    <div className="task-card">
+    {error ? (
       <Notfound />
-      ) : (
+    ) : (
       tasks?.map((item) => (
-        <div key={item._id}>
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
-          <div>{item.status}</div>
+        <div className="task-card-item" key={item._id} >
+          <CustomCard
+            title={item.title}
+            cardtext={item.description}
+          />
+
+          <div className="taskdate">{item.createdAt}</div>
+          <div style={{ color: item.status === 'incomplete' ? 'red' : 'green',  }}>
+              {item.status}
+            </div>
+          
         </div>
       ))
     )}
-  </>
+  </div>
   );
 };
 

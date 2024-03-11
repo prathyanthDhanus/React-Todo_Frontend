@@ -34,7 +34,6 @@ const LoginComponent = () => {
              navigate("/")
           }
           
-         
         } catch (error) {
           swal("Error!", error.response.data.message, "error");
         }

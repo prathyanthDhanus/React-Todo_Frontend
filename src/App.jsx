@@ -17,7 +17,7 @@ function App() {
  
   const [userId, setUserId] = useState(localStorage.getItem('userId'));
   const [category,setCategory] = useState([]);
-
+  
 
   
  const contextValue = {
@@ -25,13 +25,18 @@ function App() {
   category,setCategory
  }
 
+ //---------------------------------------------------
+ 
  useEffect(() => {
   const fetchData = async () => {
-    await fetchCategoryData(userId, setCategory);
+    await fetchCategoryData(userId, setCategory); //getting category names
   };
 
   fetchData();
 }, [userId, setCategory]);
+
+//-----------------------------------------------------
+
   return (
 
   <myContext.Provider value={contextValue}>
@@ -46,6 +51,7 @@ function App() {
   <Route path='/view/month/:id' element={<Viewmonth/>}/>
   <Route path='/edit/:category/:id' element={<Editcategory/>}/>
   
+
   </Routes>
   
   </myContext.Provider>

@@ -13,7 +13,6 @@ const CustomCard = (props) => {
           <Card.Text>
            {props.cardtext}
           </Card.Text>
-          
         </Card.Body>
       </Card>
     </div>

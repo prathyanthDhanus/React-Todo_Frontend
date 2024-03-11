@@ -1,16 +1,29 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import '../Styles/editCategory.css'
+import axios from '../Api/AxiosApi';
 
 const Editcategory = () => {
   const { category, id } = useParams();
+  const navigate = useNavigate();
+  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const categoryName = {
       category: e.target.categoryname.value,
     };
-    console.log(categoryName);
+    
+      try{
+        const response = await axios.put(`/edit/todo/category/${id}`,categoryName)
+        if(response.status===200){
+            await  swal("Success!", response.data.message, "success");
+            navigate("/")
+        }
+      }catch(error){
+        swal("Error!", error.response.data.message, "error");
+      }
   };
 
   return (
