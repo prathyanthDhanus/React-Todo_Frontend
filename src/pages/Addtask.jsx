@@ -29,8 +29,6 @@ const Addtask = () => {
   };
 
   const handleAddNewCategory = (e) => {
-    // Add logic to add the new category to your state or backend if needed
-    // For now, let's just update the state
     e.stopPropagation();
     setCategory([...category, { categories: newCategory }]);
     setSelectedCategory(newCategory);

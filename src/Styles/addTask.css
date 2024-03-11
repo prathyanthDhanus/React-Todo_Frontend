@@ -91,6 +91,13 @@
     font-size: 1rem;
   }
 } */
+.taskmain {
+  background-image: url("../Images/Addtasks-pana.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
 .meeting {
   display: flex;
   flex-direction: column;
@@ -101,15 +108,13 @@
   padding: 20px;
   box-shadow: 0 6px 10px rgba(27, 3, 243, 0.1);
   border-radius: 10px;
-  /* margin-top: 5rem; */
   padding-top: 10rem;
-  
 }
-.taskmain{
-  background-image: url("../Images/Addtasks-pana.png");
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* or 100% */
+
+@media (max-width: 768px) {
+  .meeting {
+    padding-top: 5rem;
+  }
 }
 
 .title {
@@ -159,16 +164,15 @@
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s;
-  
 }
 
-.categery-grp{
+.categery-grp {
   background-color: #0d6efd;
   padding-left: 13rem;
   border-radius: 10px;
 }
 
-.categery-grp:hover{
+.categery-grp:hover {
   background-color: #0b5ed7;
 }
 
@@ -176,17 +180,8 @@
   background-color: #0009b3;
 }
 
-@media (max-width: 600px) {
-  .meeting {
-    padding: 10px;
+@media (max-width: 768px) {
+  .categery-grp {
+    padding-left: 1rem;
   }
-
-  .form-group,
-  .date-picker {
-    margin-bottom: 10px;
-  }
-
- 
-
-
 }

@@ -1,0 +1,51 @@
+.catcontainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4.5rem;
+    padding-left: 20rem;
+  }
+  
+  .catwrapper {
+    padding: 0 20px 0 20px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Images/fill.png");
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  @media (max-width: 768px) {
+    .catcontainer {
+      padding-left: 0;
+      padding-top: 2rem;
+    }
+  }
+  
+  .catform-group {
+    margin-bottom: 20px;
+  }
+  
+  .catform-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .catform-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .catbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .catbtn:hover {
+    background-color: #0056b3;
+  }

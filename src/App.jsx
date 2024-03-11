@@ -10,6 +10,8 @@ import Signup from './pages/Signup';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { fetchCategoryData } from './Functions/GetCategory';
+import Viewmonth from "./pages/Viewmonth"
+import Editcategory from './pages/Editcategory';
 
 function App() {
  
@@ -37,10 +39,12 @@ function App() {
 
   <Route path='/' element={<Home/>}/>
   <Route path='/add/task' element={<Addtask/>}/>
-  <Route path='/view/tasks' element={<Viewtasks/>}/>
+  <Route path='/view/tasks/:month/:id' element={<Viewtasks/>}/>
   <Route path='/view/full/categories/:id' element={<Viewcategories/>}/>
   <Route path='/user/login' element={<LoginComponent/>}/>
   <Route path='/user/signup' element={<Signup/>}/>
+  <Route path='/view/month/:id' element={<Viewmonth/>}/>
+  <Route path='/edit/:category/:id' element={<Editcategory/>}/>
   
   </Routes>
   

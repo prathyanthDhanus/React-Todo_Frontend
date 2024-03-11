@@ -36,7 +36,6 @@ const Signup = () => {
       <div className="container main">
         <div className="row">
           <div className="col-md-6 side-image">
-         
             <div className="text">
              
             </div>

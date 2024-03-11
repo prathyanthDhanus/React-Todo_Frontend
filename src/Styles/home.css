@@ -28,17 +28,30 @@
     width: 100%;
     max-width: 600px;
     margin-bottom: 2rem;
+    cursor: pointer;
   }
   
-  .task-item {
+  /* .task-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #9fbbf0;
     border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     margin-bottom: 1rem;
     
+  } */
+
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9fbbf0;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .task-title {
@@ -57,10 +70,13 @@
     cursor: pointer;
   }
   
-  .folder-icon{
+  .catdelete {
     display: flex;
-   justify-content: center;
-   align-items: center;
-  font-size: 1.5rem;
-  
+    margin-left: auto;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    
   }
+
+  
+ 
