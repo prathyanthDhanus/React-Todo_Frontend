@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../Styles/editCategory.css'
 import axios from '../Api/AxiosApi';
+import { IoMdCloseCircle } from "react-icons/io";
 
 const Editcategory = () => {
   const { category, id } = useParams();
@@ -29,6 +30,9 @@ const Editcategory = () => {
   return (
     <div className='catwrapper'>
     <div className='catcontainer'>
+    <div className='header-container'>
+    <IoMdCloseCircle className='editclosebtn' onClick={()=>navigate('/')}/>
+    </div>
     <h2>Edit Category Name</h2>
     <form onSubmit={handleSubmit}>
     <div className='form-group'>

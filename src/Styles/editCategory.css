@@ -6,6 +6,17 @@
     border-radius: 5px;
   }
 
+  .header-container {
+   margin-left: 33rem;
+}
+
+  .editclosebtn:hover{
+    cursor: pointer;
+    background-color: red;
+    transform: scale(2.2);
+    border-radius: 3px;
+    
+  }
  
   .catwrapper{
    /* background: linear-gradient(90deg, rgb(121, 119, 159) 0%, rgba(75, 14, 154, 1) 35%, rgb(59, 179, 203) 100%); */

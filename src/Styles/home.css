@@ -1,82 +1,117 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    height: auto;
-  
-    
-  }
-  .maindiv-home {
-    background-image: url("../Images/Task-pana.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* or 100% */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: auto;
+}
+
+.maindiv-home {
+  background-image: url("../Images/Task-pana.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* or 100% */
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1c4c05;
+  background-color: rgb(250, 248, 248);
+  border-radius: 1rem;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9fbbf0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-title {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  color: #01010b;
+}
+
+.add-task-button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catedit {
+  display: flex;
+  margin-left: auto;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
   .home-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #1c4c05;
-    background-color: rgb(250, 248, 248);
-    border-radius: 1rem;
+    font-size: 2rem;
   }
-  
-  .task-list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 2rem;
-    cursor: pointer;
-  }
-  
-  /* .task-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #9fbbf0;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    
-  } */
 
-  .task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #9fbbf0;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
   .task-title {
-    font-size: 1.5rem;
-    padding-top: 1rem;
-    color: #01010b;
-  }
-  
-  .add-task-button {
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .catdelete {
-    display: flex;
-    margin-left: auto;
-    margin-right: 2rem;
-    font-size: 1.5rem;
-    
   }
 
-  
- 
+  .add-task-button {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .catedit {
+    font-size: 1.2rem;
+  }
+}
+
+/* month view button style */
+.monthbutton {
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+.monthbutton:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.monthbutton:hover:before {
+  background-color: #fff;
+  width: 3rem;
+}

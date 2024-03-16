@@ -1,0 +1,35 @@
+.daytask-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 1rem;
+  padding: 1rem;
+  }
+  
+  .daytask-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .daytask-item-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 5px;
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .daytask-container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .daytask-container {
+      grid-template-columns: 1fr; 
+    }
+  }

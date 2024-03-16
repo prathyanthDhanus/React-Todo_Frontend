@@ -6,12 +6,11 @@ import { myContext } from '../context/contextAPI';
 import { useContext } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import DatePicker from 'react-date-picker';
 import swal from 'sweetalert';
 import "../Styles/addTask.css";
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
-import { useEffect } from 'react';
+
 
 const Addtask = () => {
   const { userId } = useContext(myContext);
@@ -63,70 +62,11 @@ try {
 }
 }
 //--------------------------------------------------------------
-// useEffect(() => {
-//   const script = document.createElement('script');
-//   script.src = 'https://static-bundles.visme.co/forms/vismeforms-embed.js';
-//   document.body.appendChild(script);
 
-//   return () => {
-//     document.body.removeChild(script); // Clean up on unmount
-//   };
-// }, []);
 
 
   return (
-    // <div className='maincontainer'>
-    // <div className="container-addtask">
-    // <h1 className="heading">Add Task</h1>
-    // <div className="form-container">
-    // <Form onSubmit={handleSubmit}>
-    //     <Form.Group className="mb-3 form-group" controlId="exampleForm.ControlInput1">
-    //     <Form.Control type="text" placeholder="Title" name='title'  />
-    //     </Form.Group>
-        
-    //     <Form.Group className="mb-3 form-group" controlId="exampleForm.ControlTextarea1">
-    //     <Form.Control as="textarea" rows={3} type='text' placeholder='What is your task today?' name='task' />
-    //     </Form.Group>
-        
-    //     {category.length > 0 ? (
-    //       <div className="dropdown-btn">
-    //       <DropdownButton id="dropdown-basic-button" title={selectedCategory   || "Select Category"} >
-    //       {category.map((task, index) => (
-    //         <Dropdown.Item key={index} onClick={() => handleCategorySelect(task.categories)}>
-    //         {task.categories}
-    //         </Dropdown.Item>
-    //         ))}
-    //         <Dropdown.Item onClick={(e) => e.stopPropagation()}>
-    //         <Form.Control
-    //         type="text"
-    //         placeholder="Add new category"
-    //         value={newCategory}
-    //         onChange={handleNewCategoryChange}
-    //         />
-    //         </Dropdown.Item>
-    //         <Dropdown.Item>
-    //         <Button variant="primary" onClick={handleAddNewCategory}>
-    //         Add
-    //         </Button>
-    //         </Dropdown.Item>
-    //         </DropdownButton>
-    //         </div>
-    //         ) : (
-    //           <Form.Group className="mb-3 form-group" controlId="exampleForm.ControlInput2">
-    //         <Form.Control type="text" placeholder="Add new category" value={newCategory} onChange={handleNewCategoryChange} />
-    //         <Button variant="primary" onClick={handleAddNewCategory}>
-    //         Add
-    //         </Button>
-    //         </Form.Group>
-    //     )}
-    //     <div className='calender-addtask'>
-    //     <DatePicker onChange={onChange} value={value} />
-    //     </div>
-    //     <Button variant="success" type='submit' className='todo-Btn'>Add task</Button>
-    //     </Form>
-    //     </div>
-    //     </div>
-    //     </div>
+
     <div className='taskmain'>
     
     <div className="meeting">
