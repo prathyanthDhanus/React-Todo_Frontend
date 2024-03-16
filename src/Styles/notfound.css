@@ -1,0 +1,40 @@
+
+.imgcontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+}
+
+.image-container {
+    width: 40rem;
+    height: 40rem;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin-left: 20rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgtext-container {
+    padding: 25px;
+    margin-left: 26rem;
+}
+
+@media screen and (max-width: 768px) {
+    .imgcontainer {
+        padding: 0;
+    }
+
+    .image-container {
+        padding-bottom: 100%;
+    }
+
+    .imgtext-container {
+        padding: 10px;
+    }
+}

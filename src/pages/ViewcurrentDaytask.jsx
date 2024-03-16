@@ -4,17 +4,15 @@ import { myContext } from "../context/contextAPI";
 import useFetchTasks from "../CustomHooks/CustomViewTask";
 import Notfound from "../component/Notfound";
 import Card2 from "../component/Card2";
-import CustomCard from "../component/Card";
-import moment from "moment";
 import Toggle from "../component/Toggle";
 import Edit from "../component/Edit";
 import Delete from "../component/Delete";
-import "../Styles/viewDay.css";
 import Loader from "../component/Loader";
 import axios from "../Api/AxiosApi"
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import "../Styles/viewDay.css";
 
 
 
