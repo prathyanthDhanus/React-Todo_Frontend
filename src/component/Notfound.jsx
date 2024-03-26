@@ -10,7 +10,7 @@ const Notfound = () => {
         <img src={notFoundImage} alt="Not Found"/>
     </div>
     <div className="imgtext-container">
-        <h2>No data found in this month</h2>
+        <h2>No data found </h2>
     </div>
 </div>
 

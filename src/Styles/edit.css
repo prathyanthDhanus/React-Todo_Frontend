@@ -1,6 +1,6 @@
 .edit-button {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: rgb(20, 20, 20);
     border: none;
@@ -17,7 +17,7 @@
   }
   
   .edit-svgIcon {
-    width: 17px;
+    width: 12px;
     transition-duration: 0.3s;
   }
   

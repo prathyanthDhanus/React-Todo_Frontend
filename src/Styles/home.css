@@ -41,6 +41,20 @@
   margin-bottom: 1rem;
 }
 
+.task-title:hover::after{
+  content: "Click and view todyas tasks"; /* Display text on hover */
+  position: absolute; /* Position the tooltip */
+  background-color: #333; /* Background color of tooltip */
+  color: white; /* Text color of tooltip */
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1; /* Ensure tooltip appears on top of other elements */
+  margin-top: 2rem;
+  margin-left: -7rem;
+  font-size: 0.7rem;
+  
+}
+
 .task-title {
   font-size: 1.5rem;
   padding-top: 1rem;
@@ -62,6 +76,10 @@
   margin-left: auto;
   margin-right: 2rem;
   font-size: 1.5rem;
+}
+
+.home-editbtn{
+padding-top: 1rem;
 }
 
 @media (max-width: 768px) {

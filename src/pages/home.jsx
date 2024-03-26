@@ -32,11 +32,14 @@ const Home = () => {
                 <button className="monthbutton"  onClick={() => {
                   navigate(`/view/month/${task._id}`);
                 }} >Monthwise Tasks</button>
+                <div className="home-editbtn">
+
                 <Edit
                   onClick={() =>
                     navigate(`/edit/${task.categories}/${task._id}`)
                   }
-                />
+                  />
+                  </div>
               </div>
             </li>
           ))}

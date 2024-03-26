@@ -45,7 +45,7 @@ const data = {
    category: selectedCategory.toUpperCase(),
    createdAt:value
 }
-console.log("data",data);
+// console.log("data",data);
 try {
   // Send data to the backend
   const response = await axios.post(`/add/todo/tasks/${userId}`,data)

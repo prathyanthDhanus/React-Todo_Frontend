@@ -1,6 +1,6 @@
 import React from 'react'
 import "../Styles/cardss.css"
-import "../Styles/toggle.css"
+// import "../Styles/toggle.css"
 import Toggle from './Toggle'
 
 

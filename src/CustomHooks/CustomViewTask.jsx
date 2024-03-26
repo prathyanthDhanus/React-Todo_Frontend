@@ -35,8 +35,16 @@ const useFetchTasks = (userId, month, currentYear, id) => {
     };
     fetchData();
   }, [userId, month, currentYear, id]);
+  // const refetchTasks = () => {
+  //   fetchData(); // Simply refetches the tasks by calling the fetchData function again
+  // };
+  const refetchTasks = async () => {
+    console.log('Refetching tasks...');
+    await fetchData();
+    console.log('Refetch complete.');
+  };
 
-  return { tasks, error };
+  return { tasks, error , refetchTasks};
 };
 
 export default useFetchTasks;

@@ -24,10 +24,10 @@ const ViewcurrentDayTask = () => {
   const currentMonth = new Date().getMonth() + 1
   const [isLoading, setIsLoading] = useState(true);
   const {id} = useParams();
-
-  //--------------task is fetching here!!!!!!--------------
-  const { tasks } = useFetchTasks(userId, currentMonth, currentYear, id);
   
+  //--------------task is fetching here!!!!!!--------------
+  const { tasks,refetchTasks } = useFetchTasks(userId, currentMonth, currentYear, id);
+  // console.log(tasks)
   //-----------------filtering todays tasks on tasks------------------
   const todaysTask = tasks.filter((task) => {
     const taskDate = new Date(task.createdAt).toISOString().slice(0, 10); // Convert createdAt to YYYY-MM-DD format
@@ -45,7 +45,7 @@ const ViewcurrentDayTask = () => {
     } else {
       setIsLoading(false); // If there are tasks, stop loading immediately
     }
-
+    
     return () => clearTimeout(timer); // Clear the timer when the component unmounts or updates
   }, [todaysTask]);
 
@@ -66,6 +66,12 @@ const ViewcurrentDayTask = () => {
    } 
    
    //---------------------------------------------------------------
+
+  //  const [initialState, setInitialState] = useState(tasks.status);
+  const [toggleKey, setToggleKey] = useState(0); // State for triggering rerender
+
+
+
   return (
 
     <div className="daytask-container">
@@ -79,12 +85,15 @@ const ViewcurrentDayTask = () => {
           <Card2
             title={item.title}
             description={item.description}
-            status={item.status}
+             status={item.status}
+            
             style={{ color: item.status === "complete" ? "green" : "red" }}
-            showToggle={Toggle}
+           
+          
           />
           <div className="daytask-item-actions">
             <Delete onClick={() => handleDelete(item._id)} />
+          <Toggle taskId={item._id} initialStatus={item.status} />
             <Edit />
           </div>
         </div>
@@ -95,4 +104,4 @@ const ViewcurrentDayTask = () => {
   )
 }
 
-export default ViewcurrentDayTask
+export default ViewcurrentDayTask 
